@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PSUPKTProvider.PSUPKTADMembershipProvider">
+    <Position X="0.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQUAgAAAAQAEgQiMMYAEAAAQAQMAABICHAEAAAkBAAQ=</HashCode>
+      <FileName>PSUPKTADMembershipProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PSUPKTProvider.PSUPKTADProfileProvider" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAgAA=</HashCode>
+      <FileName>PSUPKTADProfileProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PSUPKTProvider.PSUPKTDBProfileProvider" BaseTypeListCollapsed="true">
+    <Position X="3.75" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAIAAAAAAAAAAAAgQAAAAAAAgIgAAA=</HashCode>
+      <FileName>PSUPKTDBProfileProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PSUPKTProvider.PSUPKTRoleProvider">
+    <Position X="6.75" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAEEAAwAAAEAQAAAAAABAAAAAAAAAIAAAAEAAEQAAA=</HashCode>
+      <FileName>PSUPKTRoleProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="PSUPKTProvider.IUserProfileProvider&lt;T&gt;">
+    <Position X="3.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>IUserProfileProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

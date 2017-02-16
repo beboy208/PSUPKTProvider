@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A7BF4BE-BE3B-43B5-B95B-3CBCE19C3240}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PSUPKTProvider</RootNamespace>
+    <AssemblyName>PSUPKTProvider</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enum.cs" />
+    <Compile Include="IPSUOrgProvider.cs" />
+    <Compile Include="IUserProfileProvider.cs" />
+    <Compile Include="Model\PSUCampus.cs" />
+    <Compile Include="Model\PSUDepartment.cs" />
+    <Compile Include="Model\PSUFaculty.cs" />
+    <Compile Include="Model\PSUMajor.cs" />
+    <Compile Include="Model\PSUOrganization.cs" />
+    <Compile Include="Model\PSUProfileBase.cs" />
+    <Compile Include="Model\PSUUserInfo.cs" />
+    <Compile Include="personel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>personel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PSUADUserInfo.cs" />
+    <Compile Include="Archive\PSUPKTADMembership.cs" />
+    <Compile Include="Archive\PSUPKTADProfileProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PSUPKTADMembershipProvider.cs" />
+    <Compile Include="Model\PSUPKTRole.cs" />
+    <Compile Include="PSUPKTADProfileProvider.cs" />
+    <Compile Include="PSUOrgProvider.cs" />
+    <Compile Include="PSUPKTRoleProvider.cs" />
+    <Compile Include="PSUPKTDBProfileProvider.cs" />
+    <Compile Include="Regist2005New.cs">
+      <DependentUpon>Regist2005New.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Regist2005New.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Regist2005New.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PSUPKTPassportService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\th.ac.psu.passport\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="personel.xsc">
+      <DependentUpon>personel.xsd</DependentUpon>
+    </None>
+    <None Include="personel.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>personel.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="personel.xss">
+      <DependentUpon>personel.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Class Diagram\PSUOrgProvider.cd" />
+    <None Include="Class Diagram\PSUUserProfileProvider.cd" />
+    <None Include="Regist2005New.xsc">
+      <DependentUpon>Regist2005New.xsd</DependentUpon>
+    </None>
+    <None Include="Regist2005New.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Regist2005New.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Regist2005New.xss">
+      <DependentUpon>Regist2005New.xsd</DependentUpon>
+    </None>
+    <None Include="Service References\PSUPKTPassportService\authentication.wsdl" />
+    <None Include="Service References\PSUPKTPassportService\PSUPKTProvider.PSUPKTPassportService.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PSUPKTPassportService\PSUPKTProvider.PSUPKTPassportService.AuthenticateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PSUPKTPassportService\PSUPKTProvider.PSUPKTPassportService.GetStaffDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PSUPKTPassportService\PSUPKTProvider.PSUPKTPassportService.GetStaffIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PSUPKTPassportService\PSUPKTProvider.PSUPKTPassportService.GetStudentDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PSUPKTPassportService\PSUPKTProvider.PSUPKTPassportService.GetUserDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Web References\th.ac.psu.passport\authentication.wsdl" />
+    <None Include="Web References\th.ac.psu.passport\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://passport.psu.ac.th/authentication/authentication.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\th.ac.psu.passport\</RelPath>
+      <UpdateFromURL>https://passport.psu.ac.th/authentication/authentication.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PSUPKTProvider_th_ac_psu_passport_Authentication</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\th.ac.psu.passport\authentication.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\PSUPKTPassportService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PSUPKTPassportService\authentication.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PSUPKTPassportService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PSUPKTPassportService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PSUPKTPassportService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
